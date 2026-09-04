@@ -1,0 +1,39 @@
+{
+  "name": "genpark-spa-network-idle-settlement-waiter-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Single-page application network idle and DOM mutation settlement waiter ensuring complete client-side hydration before actions.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "web-agent",
+  "tags": [
+    "network-idle",
+    "spa-hydration",
+    "dom-mutations",
+    "playwright",
+    "flaky-test-fixer"
+  ],
+  "inputs": {
+    "page_url": {
+      "type": "string"
+    },
+    "max_wait_ms": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "wait_session_id": {
+      "type": "string"
+    },
+    "network_idle_achieved": {
+      "type": "boolean"
+    },
+    "settlement_time_ms": {
+      "type": "integer"
+    },
+    "telemetry_trace_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
